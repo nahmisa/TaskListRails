@@ -1,5 +1,6 @@
 <h1>Tasks#show</h1>
 <p>Find me in app/views/tasks/show.html.erb</p>
-<p>
-  I will show the details of an individual task
-</p>
+<% @current_task.each do |key, value| %>
+  <h2><%= key %></h2>
+  <h3><%= value %></h3>
+<% end %>

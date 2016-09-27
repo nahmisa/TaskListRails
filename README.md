@@ -32,11 +32,11 @@ Each task record will include all of the following. Optional in this context mea
 ## 🌊 Wave 1
 This wave is where we will introduce the view layer to interact with our application via the browser.
 
-- Set up necessary controller(s) and route(s) that you will need in order to show a task from the database
+[DONE]- Set up necessary controller(s) and route(s) that you will need in order to show a task from the database
 [DONE]- Create a root route for your application that directs users to the list of all tasks
 [DONE]  - Each task name in the list should link to a `show` action that will render a new view for the user.
-  - The `show` view should include the complete information about the task: name, description, completion status, and completion date.
-- All markup in all views should have semantic relevance.
+[DONE]  - The `show` view should include the complete information about the task: name, description, completion status, and completion date.
+[DONE]- All markup in all views should have semantic relevance.
 
 <!--
 ## 🌊 Wave 2
