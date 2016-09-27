@@ -115,3 +115,9 @@ Processing by TasksController#show as HTML
   Parameters: {"id"=>"1"}
   Rendered tasks/show.html.erb within layouts/application (0.5ms)
 Completed 200 OK in 73ms (Views: 72.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/tasks" for ::1 at 2016-09-27 16:15:43 -0700
+Processing by TasksController#index as HTML
+  Rendered tasks/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 146ms (Views: 145.6ms | ActiveRecord: 0.0ms)
