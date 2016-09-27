@@ -1,32 +1,32 @@
 # Task List Rails ✅
-We are going to build a Task List in Rails. This web application will enable us to keep track of list of tasks with the functionality to add, edit and remove tasks from a list. 
+We are going to build a Task List in Rails. This web application will enable us to keep track of list of tasks with the functionality to add, edit and remove tasks from a list.
 
-Tracking tasks in a web app will let us focus on following Rails conventions and learning how data flows through a Rails application. 
+Tracking tasks in a web app will let us focus on following Rails conventions and learning how data flows through a Rails application.
 
-## Baseline 
+## Baseline
 **Once you've achieved this baseline, take a walk around the room and see if you can answer questions or help other folks.**
 
 This project...
 
-- Will have our standard Github setup (fork this repo and clone to your machine)
+[DONE]- Will have our standard Github setup (fork this repo and clone to your machine)
 - requires you to create a Rails application
   - create a controller for your `Tasks`
   - conform to Rails conventions on naming and inflection
 
-  <!--- 
+  <!---
   Baseline Part 2:
   - create a `Task` model a migration.
     - create the database schema and tables with `rake db:migrate`
     - the `Task` model should include _at least_ a name, a description and a completion indicator-->
-    
-<!-- Tinker with your Model in the `rails console` in order to ensure you have created your model and can interact with it as expected. 
+
+<!-- Tinker with your Model in the `rails console` in order to ensure you have created your model and can interact with it as expected.
 
 ## Task Data Requirements
 
 Each task record will include all of the following. Optional in this context means that the user may choose not to provide this information, but it is still required for your schema:
 - Self-incrementing identifier (ID)
-- title: the title of the task 
-- description: details about the task 
+- title: the title of the task
+- description: details about the task
 - completed_at: the time and date the task was completed -->
 
 ## 🌊 Wave 1
@@ -37,7 +37,7 @@ This wave is where we will introduce the view layer to interact with our applica
   - Each task name in the list should link to a `show` action that will render a new view for the user.
   - The `show` view should include the complete information about the task: name, description, completion status, and completion date.
 - All markup in all views should have semantic relevance.
-  
+
 <!--
 ## 🌊 Wave 2
 In this wave we will add the first set of user interactivity and persistence.
