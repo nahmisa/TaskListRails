@@ -6,4 +6,8 @@ class TasksController < ApplicationController
   def show
     @current_task = Task.find(params[:id])
   end
+
+  def new
+  end
+  
 end
