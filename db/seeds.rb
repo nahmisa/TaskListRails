@@ -5,3 +5,26 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+def random_time
+  Time.at(rand * Time.now.to_i)
+end
+
+tasks_seed = [
+      {
+        title: "Take out trash",
+        description: "Trash outside",
+        due_date: random_time,
+        completed_at: random_time,
+      },
+      {
+        title: "Walk the dog",
+        description: "Dog outside",
+        due_date: random_time,
+        completed_at: nil,
+      },
+    ]
+
+tasks_seed.each do |task|
+  Task.create task
+end
