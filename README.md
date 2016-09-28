@@ -13,21 +13,21 @@ This project...
 [DONE]  - create a controller for your `Tasks`
   - conform to Rails conventions on naming and inflection
 
-  <!---
+  -
   Baseline Part 2:
-  - create a `Task` model a migration.
+  [DONE]- create a `Task` model a migration.
     - create the database schema and tables with `rake db:migrate`
-    - the `Task` model should include _at least_ a name, a description and a completion indicator-->
+    - the `Task` model should include _at least_ a name, a description and a completion indicator
 
-<!-- Tinker with your Model in the `rails console` in order to ensure you have created your model and can interact with it as expected.
+Tinker with your Model in the `rails console` in order to ensure you have created your model and can interact with it as expected.
 
 ## Task Data Requirements
 
 Each task record will include all of the following. Optional in this context means that the user may choose not to provide this information, but it is still required for your schema:
-- Self-incrementing identifier (ID)
-- title: the title of the task
-- description: details about the task
-- completed_at: the time and date the task was completed -->
+[DONE]- Self-incrementing identifier (ID)
+[DONE]- title: the title of the task
+[DONE]- description: details about the task
+[DONE]- completed_at: the time and date the task was completed
 
 ## 🌊 Wave 1
 This wave is where we will introduce the view layer to interact with our application via the browser.
