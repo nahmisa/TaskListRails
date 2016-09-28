@@ -9,6 +9,9 @@
 /test/version_tmp/
 /tmp/
 
+db/development.sqlite3
+log/development.log
+
 ## Specific to RubyMotion:
 .dat*
 .repl_history
