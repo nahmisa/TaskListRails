@@ -1,17 +1,20 @@
 <h1>Tasks#index</h1>
 <p>Find me in app/views/tasks/index.html.erb</p>
 
-<ol>
-
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Destroy</th>
+    <!-- will need this later <th colspan="3"></th> -->
+  </tr>
 <% @tasks.each do |task| %>
-  <li>
-  <%= link_to "#{task.title}", each_task_path(task)  %>
-  <%= link_to 'Destroy', each_task_path(task),
+  <tr>
+    <th><%= link_to "#{task.title}", each_task_path(task)  %></th>
+    <th><%= link_to 'Destroy', each_task_path(task),
               method: :delete,
-              data: { confirm: 'Are you sure?' } %>
-  </li>
+              data: { confirm: 'Are you sure?' } %></th>
+  </tr>
 <% end %>
-
-</ol>
+</table>
 
 <%= link_to "Add New Task", tasks_new_path %>
