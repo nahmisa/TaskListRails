@@ -1047,3 +1047,9 @@ Processing by TasksController#show as HTML
   [1m[36mTask Load (0.2ms)[0m  [1mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT 1[0m  [["id", 8]]
   Rendered tasks/show.html.erb within layouts/application (0.3ms)
 Completed 200 OK in 32ms (Views: 29.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/new" for ::1 at 2016-09-28 14:48:44 -0700
+Processing by TasksController#new as HTML
+  Rendered tasks/new.html.erb within layouts/application (18.3ms)
+Completed 200 OK in 171ms (Views: 165.9ms | ActiveRecord: 0.0ms)
