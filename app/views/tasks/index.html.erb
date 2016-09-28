@@ -6,6 +6,9 @@
 <% @tasks.each do |task| %>
   <li>
   <%= link_to "#{task.title}", each_task_path(task)  %>
+  <%= link_to 'Destroy', each_task_path(task),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %>
   </li>
 <% end %>
 
