@@ -8,6 +8,7 @@ class TasksController < ApplicationController
   end
 
   def new
+    @task = Task.new
   end
 
   def create
@@ -24,7 +25,7 @@ class TasksController < ApplicationController
     @task = Task.find(params[:id])
     @task.destroy
 
-    redirect_to tasks_path
+    redirect_to root_path
   end
 
   private
