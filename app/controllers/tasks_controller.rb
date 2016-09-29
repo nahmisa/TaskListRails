@@ -35,6 +35,16 @@ class TasksController < ApplicationController
     end
   end
 
+  def complete
+    @task = Task.find(params[:id])
+
+    if @task.update(completed_at: Time.now)
+      redirect_to root_path
+    else
+      render :edit
+    end
+  end
+
   def destroy
     @task = Task.find(params[:id])
     @task.destroy

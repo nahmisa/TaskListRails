@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   post   'tasks/'         => 'tasks#create'
   get    'tasks/new'      => 'tasks#new'
   get    'tasks/:id/edit' => 'tasks#edit', as: "edit_task"
+  patch  'tasks/:id/complete' => 'tasks#complete', as: 'complete_task'
   get    'tasks/:id'      => 'tasks#show', as: "task"
   patch  'tasks/:id'      =>  'tasks#update'
 
