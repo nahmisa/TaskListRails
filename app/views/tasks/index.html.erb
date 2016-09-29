@@ -9,10 +9,13 @@
   </tr>
 <% @tasks.each do |task| %>
   <tr>
-    <th><%= link_to "#{task.title}", each_task_path(task)  %></th>
-    <th><%= link_to 'Destroy', each_task_path(task),
-              method: :delete,
-              data: { confirm: 'Are you sure?' } %></th>
+    <td><%= link_to "#{task.title}", each_task_path(task) %></td>
+
+    <td><%= button_to each_task_path(task),
+            data: {confirm: "Are you sure you want to delete permanently?"},
+            method: :delete do %>
+            <i class="fa fa-trash" aria-hidden="true"></i>
+        <% end %></td>
   </tr>
 <% end %>
 </table>
