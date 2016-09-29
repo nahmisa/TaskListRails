@@ -11,11 +11,17 @@
   <tr>
     <td><%= link_to "#{task.title}", each_task_path(task) %></td>
 
+<<<<<<< HEAD
     <td><%= button_to each_task_path(task),
             data: {confirm: "Are you sure you want to delete permanently?"},
             method: :delete do %>
             <i class="fa fa-trash" aria-hidden="true"></i>
         <% end %></td>
+=======
+    <td><%= button_to each_task_path(task), data: {confirm: "Are you sure you want to delete permanently?"}, method: :delete do %>
+        <i class="fa fa-trash" aria-hidden="true"></i>
+    <% end %></td>
+>>>>>>> 77fc81ce932ed67c639a827e4c77920b9a379fb1
   </tr>
 <% end %>
 </table>
