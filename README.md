@@ -57,10 +57,10 @@ In this wave we will extend the interactivity with users, allowing them to edit 
 - Add the ability for the user to mark a task complete
   - Add a button to the list of tasks on the home page that, when clicked, will mark a task complete.
   - Update the database with the task's completed date
-- Add the ability for the user to edit a task's details.
+[DONE]- Add the ability for the user to edit a task's details.
   [DONE]- Add an `edit` action that renders a form allowing the user to update all the fields of a task.
   [DONE]- Submitting the form from the `edit` action should _update_ the existing task; not create a new one.
     - Research: ActiveRecord's `update` method.
   [DONE]- Link to the `edit` action from the task's `show` page.
-  - DRY up your code by reusing the view code from the `new` functionality
+  [DONE]- DRY up your code by reusing the view code from the `new` functionality
     - Hint: Rendering _partials_ in Rails.
