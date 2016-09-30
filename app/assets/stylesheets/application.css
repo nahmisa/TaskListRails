@@ -23,7 +23,11 @@ html {
 
 }
 
-.task-action.complete > a {
+.task-action.complete > .done {
+  color: rgb(51, 155, 94);
+}
+
+.task-action.complete > .pending {
   color: rgb(239, 111, 94);
   visibility: hidden;
 }
