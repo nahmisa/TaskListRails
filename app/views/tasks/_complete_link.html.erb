@@ -1,0 +1,9 @@
+<ul>
+  <li class="task-action complete"><%= link_to make_completed_path_type(task),
+  class: name_completed_class(task),
+  aria: {label: "Mark Task uncomplete"},
+  method: :patch do %>
+  <i class="fa fa-check fa-fw fa-lg" aria-hidden="true"></i>
+  <% end %></li>
+
+</ul>
