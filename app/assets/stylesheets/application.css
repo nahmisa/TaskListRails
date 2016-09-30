@@ -2,6 +2,22 @@ html {
   background-color: rgb(255,255,255);
   font-family: 'Josephin Sans', sans-serif;
 }
+
+
+h1 {
+  border-bottom: solid thin;
+  border-color: rgb(88, 198, 176);
+  color: rgb(95, 95, 95);
+  padding: .5rem 5rem;
+  margin: 0;
+  font-weight: 100;
+  font-size: 3rem;
+}
+
+nav > a {
+  margin: 1rem;
+}
+
 .task-container {
   display: flex;
   /*align-content: center;
