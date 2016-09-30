@@ -15,7 +15,15 @@
     <h1 aria-label="Happy To Do TaskList"}>HAPPY
       <br>T<i class="fa fa-smile-o" aria-hidden="true"></i> D<i class="fa fa-smile-o" aria-hidden="true"></i></h1>
     <nav>
-      <%= link_to "Add New Task", tasks_new_path %>
+      <ul class="nav-link-collection">
+        <li>
+          <%= link_to "Add New", tasks_new_path %>
+        </li>
+        <li>
+          <%= link_to "View All", root_path %>
+        </li>
+      </ul>
+
     </nav>
 
   </header>

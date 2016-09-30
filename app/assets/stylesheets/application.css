@@ -14,7 +14,14 @@ h1 {
   font-size: 3rem;
 }
 
-nav > a {
+
+.nav-link-collection {
+  margin: 0 0 2.5rem 3.75rem;
+
+}
+
+.nav-link-collection li {
+  display: inline;
   margin: 1rem;
 }
 
@@ -80,6 +87,7 @@ float: left;
 }*/
 ul {
   padding: 0;
+  list-style: none;
 }
 
 a {
