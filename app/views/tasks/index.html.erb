@@ -25,26 +25,12 @@
     </header>
 
     <ul>
-    <% if task.completed_at != nil %>
-
-      <li class="task-action complete"><%= link_to uncomplete_task_path(task),
+      <li class="task-action complete"><%= link_to make_completed_path_type(task),
       class: name_completed_class(task),
       aria: {label: "Mark Task uncomplete"},
       method: :patch do %>
       <i class="fa fa-check fa-fw fa-lg" aria-hidden="true"></i>
       <% end %></li>
-
-      <% else %>
-
-      <li class="task-action complete"><%= link_to complete_task_path(task),
-      class: name_completed_class(task),
-      aria: {label: "Mark Task complete"},
-      method: :patch do %>
-      <i class="fa fa-check fa-fw fa-lg" aria-hidden="true"></i>
-      <% end %></li>
-
-    <% end %>
-
 
     </ul>
   </li>
