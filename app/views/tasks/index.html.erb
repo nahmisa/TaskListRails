@@ -33,7 +33,7 @@
       <% else %>
         <% class_name = "pending" %>
       <% end %>
-      <%= class_name %>
+
       <li class="task-action complete"><%= link_to complete_task_path(task),
       class: class_name,
       aria: {label: "Mark Task complete"},
