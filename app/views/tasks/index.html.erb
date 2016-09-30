@@ -1,31 +1,42 @@
 <h1>Tasks#index</h1>
 <p>Find me in app/views/tasks/index.html.erb</p>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Destroy</th>
-    <!-- will need this later <th colspan="3"></th> -->
-  </tr>
-<% @tasks.each do |task| %>
-  <tr>
-    <td><%= link_to "#{task.title}", task_path(task) %></td>
-    <td><%= link_to "Edit", edit_task_path(task) %></td>
+<ol>
+  <% @tasks.each do |task| %>
 
-    <td><%= button_to complete_task_path(task),
-            method: :patch do %>
-            <i class="fa fa-check" aria-hidden="true"></i>
-        <% end %></td>
+  <li class="task-container">
+    <header>
 
+      <h2 class="task-title"><%= link_to "#{task.title}", task_path(task) %></h2>
 
-    <td><%= button_to task_path(task),
-            data: {confirm: "Are you sure you want to delete permanently?"},
-            method: :delete do %>
-            <i class="fa fa-trash" aria-hidden="true"></i>
-        <% end %></td>
+      <span class="underline"></span>
 
-  </tr>
-<% end %>
-</table>
+      <ul class="mutators">
+        <li class="task-action edit"><%= link_to edit_task_path(task),
+        aria: {label: "Edit this Task"} do %>
+        <i class="fa fa-pencil fa-fw fa-lg" aria-hidden="true"></i>
+        <% end %></li>
+
+        <li class="task-action delete"><%= link_to task_path(task),
+        aria: {label: "Delete this Task"},
+        data: {confirm: "Are you sure you want to delete permanently?"},
+        method: :delete do %>
+        <i class="fa fa-trash fa-fw fa-lg" aria-hidden="true"></i>
+        <% end %></li>
+      </ul>
+
+    </header>
+
+    <ul>
+      <li class="task-action complete"><%= link_to complete_task_path(task),
+      aria: {label: "Mark Task complete"},
+      method: :patch do %>
+      <i class="fa fa-check fa-fw fa-lg" aria-hidden="true"></i>
+      <% end %></li>
+
+    </ul>
+  </li>
+  <% end %>
+</ol>
 
 <%= link_to "Add New Task", tasks_new_path %>

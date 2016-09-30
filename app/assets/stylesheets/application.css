@@ -1,15 +1,85 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+html {
+  background-color: rgb(255,255,255);
+  font-family: 'Josephin Sans', sans-serif;
+}
+.task-container {
+  display: flex;
+  /*align-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;*/
+}
+
+.task-container > header{
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+  justify-content: flex-start;
+  width: 25%;
+}
+
+.task-container:hover .task-action {
+  visibility: visible;
+
+}
+
+.task-action.complete > a {
+  color: rgb(239, 111, 94);
+  visibility: hidden;
+}
+
+.complete:hover .fa-check {
+  visibility: visible;
+
+}
+
+.task-action.edit,
+.task-action.delete {
+  visibility: hidden;
+  float: left;
+  list-style: none;
+  margin: .3rem;
+}
+
+
+.task-action.complete {
+  margin: .25rem;
+  border-style: solid;
+  border-width: .15rem;
+  border-color: rgb(88, 198, 176);
+  border-radius: 50%;
+  padding: .75rem;
+  float: left;
+  list-style: none;
+}
+
+
+/*li {
+float: left;
+
+}*/
+ul {
+  padding: 0;
+}
+
+a {
+  color: rgb(149, 149, 149);
+  text-decoration: none;
+}
+
+.task-title {
+  margin: 0;
+  /*font-weight: normal;*/
+}
+
+.task-title > a {
+  color: rgb(95, 95, 95);
+  font-weight: 100;
+}
+
+.underline {
+  border: solid thin;
+  color: rgb(88, 198, 176);
+  width: 100%;
+
+}
