@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get    'tasks/new'      => 'tasks#new'
   get    'tasks/:id/edit' => 'tasks#edit', as: "edit_task"
   patch  'tasks/:id/complete' => 'tasks#complete', as: 'complete_task'
+  patch  'tasks/:id/uncomplete' => 'tasks#uncomplete', as: 'uncomplete_task'
   get    'tasks/:id'      => 'tasks#show', as: "task"
   patch  'tasks/:id'      =>  'tasks#update'
 
