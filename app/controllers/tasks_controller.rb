@@ -47,7 +47,7 @@ class TasksController < ApplicationController
 
   def uncomplete
     @task = Task.find(params[:id])
-    
+
     if @task.update(completed_at: nil)
       redirect_to root_path
     else
@@ -64,7 +64,7 @@ class TasksController < ApplicationController
 
   private
   def task_params
-    params.require(:task).permit(:title, :description)
+    params.require(:task).permit(:title, :description, :due_date)
   end
 
 end
