@@ -16,4 +16,10 @@ class SessionsController < ApplicationController
 
     redirect_to root_path
   end
+
+  def destroy
+    # allows the user to log-out
+    session.delete(:user_id)
+    redirect_to root_path
+  end
 end
