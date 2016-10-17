@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   # for log-in/log-out
   get    '/auth/:provider/callback' =>  'sessions#create'
   delete '/sessions'      => 'sessions#destroy', as: 'log_out'
+  get '/sessions/login_failure' => 'sessions#login_failure', as: 'login_failure'
 
   get    'tasks/'         => 'tasks#index'
   post   'tasks/'         => 'tasks#create'

@@ -17,6 +17,10 @@ class SessionsController < ApplicationController
     redirect_to root_path
   end
 
+  def login_failure
+  # will put stuff in here later
+  end
+
   def destroy
     # allows the user to log-out
     session.delete(:user_id)
