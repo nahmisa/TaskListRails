@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   root   'tasks#index'
   # for log-in/log-out
-  get "/auth/:provider/callback" =>  "sessions#create"
-  delete '/sessions' => 'sessions#destroy', as: 'log_out'
+  get    '/auth/:provider/callback' =>  'sessions#create'
+  delete '/sessions'      => 'sessions#destroy', as: 'log_out'
 
   get    'tasks/'         => 'tasks#index'
   post   'tasks/'         => 'tasks#create'
