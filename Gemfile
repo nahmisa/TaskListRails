@@ -24,6 +24,9 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 # for awesome fonts!
 gem 'font-awesome-rails', '~> 4.1.0.0'
+# lets implement log-in!
+gem "omniauth"
+gem "omniauth-github"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -37,6 +40,12 @@ gem 'font-awesome-rails', '~> 4.1.0.0'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  # for better development/testing output in browser
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  # for implementing OAuth log-in
+  gem 'dotenv-rails'
+
 end
 
 group :development do
