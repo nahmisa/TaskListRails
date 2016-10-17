@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   root   'tasks#index'
+  # for log-in
+  get "/auth/:provider/callback" =>  "sessions#create"
 
   get    'tasks/'         => 'tasks#index'
   post   'tasks/'         => 'tasks#create'
