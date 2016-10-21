@@ -1,7 +1,11 @@
 class SessionsController < ApplicationController
+  skip_before_action :require_login, only: [:login, :create]
+
+  def login; end
+
   def create
     auth_hash = request.env['omniauth.auth']
-    redirect to login_failure_path unless auth_hash['uid']
+    redirect to creation_failure_path unless auth_hash['uid']
 
     @user = User.find_by(uid: auth_hash[:uid], provider: 'github')
     if @user.nil?
@@ -14,14 +18,12 @@ class SessionsController < ApplicationController
     # Save the user ID in the session
     session[:user_id] = @user.id
 
-    redirect_to root_path
+    redirect_to tasks_path
   end
 
-  def login_failure
-  # will put stuff in here later
-  end
+  def login_failure; end
 
-  def destroy
+  def logout
     # allows the user to log-out
     session.delete(:user_id)
     redirect_to root_path

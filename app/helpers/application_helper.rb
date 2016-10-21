@@ -1,10 +1,16 @@
 module ApplicationHelper
-  def create_log_in_out_link(user_status)
-    if user_status.nil?
-      link_to "Log In", '/auth/github', method: :get
+
+  def login_button(**kwargs)
+    if session[:user_id].nil?
+      text = "Log In"
+      path = login_path
+      method = :get
     else
-      link_to "Log Out", log_out_path, method: :delete
+      text = "Log Out"
+      path = logout_path
+      method = :delete
     end
+    link_to text, path, method: method, **kwargs
   end
 
 end
