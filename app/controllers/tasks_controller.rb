@@ -1,6 +1,8 @@
 class TasksController < ApplicationController
+  before_action :validate_user, only: [:edit, :update]
+
   def index
-    @tasks = Task.all
+    @tasks = @current_user.tasks
   end
 
   def show
@@ -17,9 +19,10 @@ class TasksController < ApplicationController
 
   def create
     @task = Task.new(task_params)
+    @task.user_id = session[:user_id]
 
     if @task.save
-      redirect_to root_path
+      redirect_to tasks_path
     else
       render :new
     end
@@ -29,7 +32,7 @@ class TasksController < ApplicationController
     @task = Task.find(params[:id])
 
     if @task.update(task_params)
-      redirect_to root_path
+      redirect_to tasks_path
     else
       render :edit
     end
@@ -39,7 +42,7 @@ class TasksController < ApplicationController
     @task = Task.find(params[:id])
 
     if @task.update(completed_at: Time.now)
-      redirect_to root_path
+      redirect_to tasks_path
     else
       render :edit
     end
@@ -49,7 +52,7 @@ class TasksController < ApplicationController
     @task = Task.find(params[:id])
 
     if @task.update(completed_at: nil)
-      redirect_to root_path
+      redirect_to tasks_path
     else
       render :edit
     end
@@ -59,7 +62,7 @@ class TasksController < ApplicationController
     @task = Task.find(params[:id])
     @task.destroy
 
-    redirect_to root_path
+    redirect_to tasks_path
   end
 
   private
@@ -67,4 +70,9 @@ class TasksController < ApplicationController
     params.require(:task).permit(:title, :description, :due_date)
   end
 
+  def validate_user
+    unless Task.find(params[:id]).user_id == session[:user_id]
+      redirect_to root_path
+    end
+  end
 end
